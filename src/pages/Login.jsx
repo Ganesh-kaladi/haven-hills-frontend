@@ -19,7 +19,11 @@ function Login() {
   useEffect(
     function () {
       if (errorAuth) {
-        toast(errorAuth.err);
+        if (errorAuth.err === "jwt malformed") {
+          toast("please login to your account");
+        } else {
+          toast(errorAuth.err);
+        }
       }
 
       return () => {

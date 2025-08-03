@@ -11,13 +11,13 @@ function LandingPage() {
         <div className="w-12 h-12">
           <img src={logo} className="w-full rounded-lg" alt="..." />
         </div>
-        <h1 className="text-2xl md:text-3xl font-bold text-amber-500 ms-3">
+        <h1 className="text-xl md:text-3xl font-bold text-amber-500 ms-3">
           Haven Hills
         </h1>
       </div>
 
       <div className="relative z-10 h-[90vh] flex justify-center items-center">
-        <div className="w-full max-w-[680px] text-center  p-6">
+        <div className="w-full max-w-[680px] text-center p-6 mt-[-6rem] sm:mt-auto sm:mb-auto">
           <h1 className="text-xl md:text-4xl text-amber-500  font-bold mb-4">
             Heaven Hills
           </h1>

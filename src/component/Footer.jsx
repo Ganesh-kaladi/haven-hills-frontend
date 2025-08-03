@@ -43,13 +43,13 @@ function Footer() {
                   <span className="text-blue-500">
                     <Phone />
                   </span>
-                  <span className="text-slate-400">+1 (555) 123-4567</span>
+                  <span className="text-slate-400">+91 12345 67890</span>
                 </li>
                 <li className="flex gap-4 mb-3">
                   <span className="text-blue-500">
                     <Mail />
                   </span>
-                  <span className="text-slate-400">info@lovableai.com</span>
+                  <span className="text-slate-400">info@havenhills.com</span>
                 </li>
               </ul>
             </div>
@@ -71,7 +71,7 @@ function Footer() {
 
         <p className="text-center text-slate-400 mt-6">
           © 2025 Haven Hills. All rights reserved. Made with ❤️ for travelers.
-          tis is a educational project.
+          this is a educational project.
         </p>
       </div>
     </footer>

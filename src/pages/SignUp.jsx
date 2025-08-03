@@ -70,7 +70,6 @@ function SignUp() {
     }
 
     dispatch(createUser(userData)).then((res) => {
-      console.log(res);
       if (res.type === "createUser/fulfilled") {
         setUserData((cur) => ({
           ...cur,

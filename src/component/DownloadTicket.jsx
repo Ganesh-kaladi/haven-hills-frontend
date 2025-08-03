@@ -2,12 +2,14 @@ import axios from "axios";
 import { ArrowDown } from "lucide-react";
 import { useSelector } from "react-redux";
 
+const url = import.meta.env.VITE_APP_BACKEND_URL;
+
 function DownloadTicket({ bookingID }) {
   const { token } = useSelector((state) => state.auth);
   async function downloadRecepit() {
     try {
       const response = await axios.get(
-        `http://127.0.0.1:5235/api/v1/booking/download-ticket/${bookingID}`,
+        `${url}/api/v1/booking/download-ticket/${bookingID}`,
         {
           responseType: "blob",
           headers: {

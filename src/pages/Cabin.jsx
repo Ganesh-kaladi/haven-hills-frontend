@@ -22,7 +22,9 @@ function Cabin() {
   const navigate = useNavigate();
 
   const { singleCabin, isLoadingCabin } = useSelector((state) => state.cabin);
-  const { user, token, authenticate } = useSelector((state) => state.auth);
+  const { user, token, authenticate, errorAuth } = useSelector(
+    (state) => state.auth
+  );
 
   const [bookingOption, setBookingOption] = useState({
     nights: 1,
@@ -59,6 +61,22 @@ function Cabin() {
 
   useEffect(
     function () {
+      if (errorAuth) {
+        if (errorAuth.err === "jwt malformed") {
+          toast("please login to your account");
+        } else {
+          toast(errorAuth.err);
+        }
+      }
+      return () => {
+        dispatch(clearAuthError());
+      };
+    },
+    [errorAuth]
+  );
+
+  useEffect(
+    function () {
       dispatch(getCabin(cabinID));
 
       return () => {
@@ -70,8 +88,10 @@ function Cabin() {
 
   useEffect(
     function () {
-      if (!user) {
-        dispatch(getMe(token));
+      if (token) {
+        if (!user) {
+          dispatch(getMe(token));
+        }
       }
     },
     [user, dispatch, token]

@@ -33,10 +33,10 @@ function CheckAvilable() {
   return (
     <div className="mt-6">
       <div className="flex flex-col lg:flex-row lg:justify-end md:items-end gap-6 p-4">
-        <div className="flex gap-2 items-center">
+        <div className="flex gap-2 items-center md:w-[70%] lg:w-auto">
           <label
             htmlFor="start"
-            className="text-gray-500 text-xl font-semibold w-[40%] sm:w-[28%] md:w-[auto]"
+            className="text-gray-500 text-xl font-semibold w-[40%] sm:w-[28%] md:w-[40%] lg:w-auto"
           >
             start date&nbsp;&nbsp;<b>:</b>
           </label>
@@ -45,13 +45,13 @@ function CheckAvilable() {
             id="start"
             name="start"
             onChange={handleChenge}
-            className="border border-gray-600 rounded bg-gray-800 px-4 py-1 text-gray-400 focus:outline-none w-[60%] sm:w-[72%] md:w-[auto]"
+            className="border border-gray-600 rounded bg-gray-800 px-4 py-1 text-gray-400 focus:outline-none w-[60%] sm:w-[72%] md:w-[60%] lg:w-auto"
           />
         </div>
-        <div className="flex gap-2 items-center">
+        <div className="flex gap-2 items-center md:w-[70%] lg:w-auto">
           <label
             htmlFor="end"
-            className="text-gray-500 text-xl font-semibold w-[40%] sm:w-[28%] md:w-[auto]"
+            className="text-gray-500 text-xl font-semibold w-[40%] sm:w-[28%] md:w-[40%] lg:w-auto"
           >
             end date&nbsp;&nbsp;<b>:</b>
           </label>
@@ -60,7 +60,7 @@ function CheckAvilable() {
             id="end"
             name="end"
             onChange={handleChenge}
-            className="border border-gray-600 rounded bg-gray-800 px-4 py-1 text-gray-400 focus:outline-none w-[60%] sm:w-[72%] md:w-[auto]"
+            className="border border-gray-600 rounded bg-gray-800 px-4 py-1 text-gray-400 focus:outline-none w-[60%] sm:w-[72%] md:w-[60%] lg:w-auto"
           />
         </div>
         <div>

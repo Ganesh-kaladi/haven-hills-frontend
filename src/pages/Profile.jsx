@@ -83,11 +83,11 @@ function Profile() {
                   {user?.profileImage?.url ? null : <AddProfilePic />}
                 </div>
               </div>
-              <h6 className="mt-2 text-xl font-semibold text-center text-gray-900">
+              <h6 className="mt-2 text-xl font-semibold text-center text-cyan-50">
                 {`${user?.firstName} ${user?.lastName}`}
               </h6>
               <p className="text-lg text-slate-900">haven hills</p>
-              <span className="text-lg text-slate-900 mt-4 block">
+              <span className="text-lg text-cyan-50 mt-4 block">
                 since&nbsp;{ISTdate(user?.createdAt)}
               </span>
               <div className="w-full flex justify-around border-t mt-4 pt-4">
@@ -95,18 +95,18 @@ function Profile() {
                   <span className="block text-3xl font-semibold text-gray-900">
                     {user?.bookings}
                   </span>
-                  <span className="text-slate-900">total bookings</span>
+                  <span className="text-cyan-50">total bookings</span>
                 </div>
                 <div>
                   <span className="block text-3xl font-semibold text-gray-900">
                     4.4
                   </span>
-                  <span className="text-slate-900">Avg Rating</span>
+                  <span className="text-cyan-50">Avg Rating</span>
                 </div>
               </div>
             </div>
             <div className="bg-slate-400 p-5 rounded-lg mt-10 sm:w-[50%] sm:mt-0 lg:w-full lg:mt-10">
-              <h5 className="text-2xl text-gray-900 font-semibold">
+              <h5 className="text-2xl text-cyan-50 font-semibold">
                 Quick Actions
               </h5>
               <ProfileActionBtn icon={Settings}>
@@ -122,7 +122,7 @@ function Profile() {
             <div className="bg-slate-400 p-5 py-8 rounded-lg">
               <form onSubmit={handleSubmit}>
                 <div className="flex justify-between w-full">
-                  <h5 className="text-2xl text-gray-900 font-semibold">
+                  <h5 className="text-xl lg:text-2xl text-cyan-50 font-semibold">
                     Personal Information
                   </h5>
 
@@ -210,15 +210,15 @@ function Profile() {
             </div>
 
             <div className="mt-10 bg-slate-400 rounded-lg px-5 py-8">
-              <h5 className="text-2xl text-gray-900 font-semibold">
-                Personal Information
+              <h5 className="text-2xl text-cyan-50 font-semibold">
+                Notification Information
               </h5>
               <div className="mt-2">
                 <p className="text-lg mb-0 text-slate-700">
                   Email Notifications
                 </p>
                 <div className="flex justify-between">
-                  <p className="text-slate-900">
+                  <p className="text-cyan-50">
                     Receive updates about bookings and offers
                   </p>
                   <input type="checkbox" defaultChecked={true} />
@@ -229,7 +229,7 @@ function Profile() {
                   SMS Notifications Notifications
                 </p>
                 <div className="flex justify-between">
-                  <p className="text-slate-900">
+                  <p className="text-cyan-50">
                     Get text reminders for check-in/out
                   </p>
                   <input type="checkbox" defaultChecked={true} />
@@ -238,7 +238,7 @@ function Profile() {
               <div className="border-t border-gray-500 pt-2 mt-2">
                 <p className="text-slate-700">Marketing Communications</p>
                 <div className="flex justify-between">
-                  <p className="text-slate-900">
+                  <p className="text-cyan-50">
                     eceive promotional offers and news
                   </p>
                   <input type="checkbox" />
@@ -246,10 +246,9 @@ function Profile() {
               </div>
             </div>
             <div className="mt-10 bg-slate-400 rounded-lg px-5 py-8">
-              <h5 className="text-2xl text-gray-900 font-semibold">
+              <h5 className="text-2xl text-cyan-50 font-semibold">
                 Preference
               </h5>
-
               <ProfileActionBtn icon={Settings}>
                 change password
               </ProfileActionBtn>
@@ -267,7 +266,7 @@ function Profile() {
 
 function ProfileActionBtn({ children, icon: Icon }) {
   return (
-    <button className="mt-3 flex items-center gap-2 bg-slate-800 text-gray-400 hover:text-gray-500 transition-all w-full px-4 py-2 cursor-pointer rounded">
+    <button className="mt-3 flex items-center gap-2 bg-slate-800 text-gray-300 hover:text-gray-400 transition-all w-full px-4 py-2 cursor-pointer rounded">
       <Icon /> {children}
     </button>
   );
@@ -284,7 +283,7 @@ function InputContainer({
 }) {
   return (
     <div className={`${styleClass}`}>
-      <label htmlFor={inputName} className="block text-xl text-gray-950">
+      <label htmlFor={inputName} className="block text-xl text-amber-200">
         {children}
       </label>
 
@@ -293,13 +292,13 @@ function InputContainer({
           id={inputName}
           name={inputName}
           type={type}
-          className="w-full border border-slate-800 bg-slate-800 text-gray-400 mt-1 text-xl rounded-lg px-4 py-1 focus:outline-none"
+          className="w-full border border-slate-800 bg-slate-800 text-cyan-50 mt-1 text-xl rounded-lg px-4 py-1 focus:outline-none"
           // placeholder="enter your first name . . ."
           value={val}
           onChange={handleChange}
         />
       ) : (
-        <span className="block w-full text-slate-700 mt-1  py-1  text-xl font-semibold">
+        <span className="block w-full text-cyan-50 mt-1  py-1  text-xl font-semibold">
           {val}
         </span>
       )}

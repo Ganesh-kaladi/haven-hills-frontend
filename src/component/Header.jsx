@@ -32,8 +32,8 @@ function Header() {
   return (
     <header className="text-slate-100 sticky top-0 w-[100%] z-50">
       <div>
-        <div className="bg-[#030616f3]">
-          <div className="w-[90%] mx-auto h-16 flex justify-between items-center bg-[#030616f3]">
+        <div className="bg-[#030616e7]">
+          <div className="w-[90%] mx-auto h-16 flex justify-between items-center bg-[#030616e7]">
             {/* logo  */}
             <div className="z-8 flex items-center px-4">
               <div className="w-8 h-8 sm:w-10 sm:h-10">
@@ -62,13 +62,13 @@ function Header() {
               <Link to="login">
                 {authenticate ? (
                   <button
-                    className="text-[1rem] lg:text-lg flex gap-4 items-center border border-slate-700 hover:bg-gray-700 duration-300 px-4 py-[0.2rem] rounded-lg cursor-pointer text-slate-400 hover:text-slate-600"
+                    className="text-[1rem] lg:text-lg flex gap-4 items-center border border-slate-700 hover:bg-gray-700 duration-300 px-4 py-[0.2rem] rounded-lg cursor-pointer text-cyan-100 hover:text-cyan-200"
                     onClick={handleLogout}
                   >
                     log out
                   </button>
                 ) : (
-                  <button className=" text-[1rem] lg:text-lg flex gap-4 items-center border border-slate-700 hover:bg-gray-700 duration-300 px-4 py-[0.2rem] rounded-lg cursor-pointer text-slate-400">
+                  <button className=" text-[1rem] lg:text-lg flex gap-4 items-center border border-slate-700 hover:bg-gray-700 duration-300 px-4 py-[0.2rem] rounded-lg cursor-pointer text-cyan-100 hover:text-cyan-200">
                     login
                   </button>
                 )}
@@ -84,7 +84,7 @@ function Header() {
 
         {/* nav links */}
         {showNav && (
-          <div className={`z-0 bg-[#030616f3]  ${isOpen ? "nav" : "nav_anti"}`}>
+          <div className={`z-0 bg-[#030616e7]  ${isOpen ? "nav" : "nav_anti"}`}>
             <nav className="md:hidden pt-2 w-[84%] mx-auto flex flex-col gap-4 py-4">
               <Links val={"cabins"} icon={Bed} toggeleNav={toggeleNav}>
                 cabins
@@ -109,7 +109,7 @@ function Header() {
               <Link to="login">
                 {authenticate ? (
                   <button
-                    className="text-xl flex gap-4 items-center border border-gray-700 hover:bg-gray-700 duration-300 px-4 py-[0.2rem] rounded-lg cursor-pointer text-slate-500 hover:text-slate-400"
+                    className="text-xl flex gap-4 items-center border border-gray-700 hover:bg-gray-700 duration-300 px-4 py-[0.2rem] rounded-lg cursor-pointer text-cyan-100 hover:text-cyan-200"
                     onClick={() => {
                       handleLogout();
                       toggeleNav();
@@ -120,7 +120,7 @@ function Header() {
                 ) : (
                   <button
                     onClick={() => toggeleNav()}
-                    className="text-xl flex gap-4 items-center duration-300 px-4 py-[0.2rem] rounded-lg cursor-pointer border border-gray-700 hover:bg-gray-700 text-slate-500 hover:text-slate-400"
+                    className="text-xl flex gap-4 items-center duration-300 px-4 py-[0.2rem] rounded-lg cursor-pointer border border-gray-700 hover:bg-gray-700 text-cyan-100 hover:text-cyan-200"
                   >
                     login
                   </button>
@@ -138,11 +138,11 @@ function Links({ children, val, icon: Icon, toggeleNav }) {
   return (
     <NavLink
       to={val}
-      className="flex gap-2 text-slate-400 hover:text-slate-600"
+      className="flex gap-2 text-cyan-300 hover:text-cyan-600"
       onClick={toggeleNav}
     >
       <Icon />
-      <span className="text-[1rem] lg:text-lg font-semibold">{children}</span>
+      <span className="text-[1rem] lg:text-lg ">{children}</span>
     </NavLink>
   );
 }
