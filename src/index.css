@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+body {
+  background-color: #030616f3;
+  font-family: "Handlee", cursive;
+}
+
+.bg__image {
+  background: linear-gradient(180deg, #00000057 10%, #000000a1 30%),
+    linear-gradient(45deg, #3b3a3a81 20%, #3b3a3a81 30%, #3b3a3a81 95%),
+    url("./assets/bg-image.png");
+  background-size: cover;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+body {
+  font-family: "Handlee", cursive;
+}
+
+.nav {
+  animation: slideDownFade 0.4s ease;
+}
+
+.nav_anti {
+  animation: slideUpFade 0.4s ease;
+}
+
+@keyframes slideDownFade {
+  0% {
+    width: 100%;
+    transform: translateY(-50px);
+  }
+  100% {
+    width: 100%;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUpFade {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50px);
+  }
+}
